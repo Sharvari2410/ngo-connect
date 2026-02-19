@@ -67,7 +67,10 @@ export function FundUsageChart({ ngoName }: FundUsageChartProps) {
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: number) => `${value}%`}
+            formatter={(value: number | undefined) =>
+              value !== undefined ? `${value}%` : "0%"
+            }
+            
             contentStyle={{
               borderRadius: 12,
               borderColor: "#e5e7eb",
