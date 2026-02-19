@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f5fbff;
+  --foreground: #0f172a;
+  --color-primary: #0ea5e9; /* soft blue */
+  --color-primary-soft: #e0f2fe; /* light blue */
+  --color-accent: #10b981; /* soft green */
+  --color-muted: #e5e7eb; /* neutral gray */
+}
+
+body {
+  @apply min-h-screen bg-[radial-gradient(circle_at_top,_#e0f2fe,_#f5fbff)] text-foreground antialiased;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
